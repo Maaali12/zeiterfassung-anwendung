@@ -1,6 +1,6 @@
 # Pflichtenheft - Zeiterfassungssystem
 
-**Version:** 1.0 | **Datum:** 18.11.2025 | **Entwickler:** Maximilian G. | **Auftraggeber:** ZIM
+**Version:** 1.1 | **Datum:** 18.11.2025 | **Entwickler:** Maximilian G. | **Auftraggeber:** ZIM
 
 ---
 
@@ -28,7 +28,7 @@ Digitales Zeiterfassungssystem zur projektbezogenen Dokumentation von Arbeitszei
 - **FA-04:** Tabellarische Übersicht aller Zeiteinträge (Projekt, Start, End, Dauer)
 - **FA-05:** Berechnung der Gesamtzeit pro Projekt
 - **FA-06:** Visuelle Warnung (rote Zeile) bei Überschreitung von 90 % des Zeitbudgets
-- **FA-07:** Optionale verschlüsselung von sensiblen Daten bzw. Projekten
+- **FA-08:** Optionale verschlüsselung von sensiblen Daten bzw. Projekten
 - **FA-07:** Persistente Speicherung in SQLite-Datenbank
 
 ---
