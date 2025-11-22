@@ -13,3 +13,13 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+# IHK Vorlage
+Dokumentation_Al_Mahani_Yousra (2).pdf
+
+# .NET
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
