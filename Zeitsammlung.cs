@@ -40,7 +40,7 @@ public partial class Zeitsammlung : Form
     private void RefreshEntries()
     {
         listViewEntries.Items.Clear();
-        var entries = _db.GetZeiteintraege();
+        var entries = _db.GetZeiteintraege().OrderByDescending(x => x.Startzeit).ToList();
         var projekte = _db.GetProjekte();
 
         foreach (var entry in entries)
