@@ -257,7 +257,6 @@ public void AddZeiteintrag(Zeiteintrag e) {
     using var connection = new SqliteConnection(GetConnectionString());
     connection.Open();
     using var cmd = new SqliteCommand("INSERT INTO Zeiteintraege ...", connection);
-    // ... Parameterisierung ...
     cmd.ExecuteNonQuery();
 }
 ```
@@ -272,7 +271,6 @@ Das Budget-Monitoring berechnet die Summe aller Zeiteinträge eines Projekts:
 var entries = _db.GetZeiteintraege(p.ProjektID);
 double totalMinutes = entries.Sum(x => x.Dauer.TotalMinutes);
 if (totalMinutes >= p.Zeitbudget * 0.9) {
-    // Visuelle Warnung setzen
 }
 ```
 Diese Logik ist zentral in der `RefreshEntries`-Methode verankert, die nach jeder Änderung aufgerufen wird.

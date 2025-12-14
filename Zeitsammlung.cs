@@ -51,7 +51,6 @@ public partial class Zeitsammlung : Form
             item.SubItems.Add(entry.Endzeit.ToString("G"));
             item.SubItems.Add(entry.Dauer.ToString(@"hh\:mm\:ss"));
             
-            // FA-06: Warnung bei > 90% Budget
             if (p != null)
             {
                 var gesamtMinuten = _db.GetZeiteintraege(p.ProjektID).Sum(x => x.Dauer.TotalMinutes);
@@ -166,7 +165,7 @@ public partial class Zeitsammlung : Form
         RefreshEntries();
     }
 
-    private void Form1_Load(object sender, EventArgs e) { /* Old method name from designer, kept for compatibility if needed */ }
+    private void Form1_Load(object sender, EventArgs e) { }
     private void button1_Click(object sender, EventArgs e) { }
     private void textBox1_TextChanged(object sender, EventArgs e) { }
 }

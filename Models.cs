@@ -4,7 +4,7 @@ public class Projekt
 {
     public int ProjektID { get; set; }
     public string Projektname { get; set; }
-    public int Zeitbudget { get; set; } // In Minuten laut README DB Schema
+    public int Zeitbudget { get; set; }
     
     public override string ToString() => Projektname;
 }
