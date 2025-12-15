@@ -28,6 +28,23 @@ public partial class ProjektVerwaltung : Form
             txtName.Text = _currentProjekt.Projektname;
             numBudget.Value = _currentProjekt.Zeitbudget;
         }
+        else
+        {
+            ClearInput();
+        }
+    }
+
+    private void btnNew_Click(object sender, EventArgs e)
+    {
+        lstProjekte.SelectedIndex = -1;
+        _currentProjekt = null;
+        ClearInput();
+    }
+
+    private void ClearInput()
+    {
+        txtName.Clear();
+        numBudget.Value = 0;
     }
 
     private void btnSave_Click(object sender, EventArgs e)
@@ -44,8 +61,7 @@ public partial class ProjektVerwaltung : Form
 
         _db.SaveProjekt(p);
         _currentProjekt = null;
-        txtName.Clear();
-        numBudget.Value = 0;
+        ClearInput();
         LoadProjekte();
     }
 
@@ -55,8 +71,7 @@ public partial class ProjektVerwaltung : Form
         {
             _db.DeleteProjekt(_currentProjekt.ProjektID);
             _currentProjekt = null;
-            txtName.Clear();
-            numBudget.Value = 0;
+            ClearInput();
             LoadProjekte();
         }
     }

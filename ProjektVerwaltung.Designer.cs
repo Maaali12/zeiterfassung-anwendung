@@ -20,6 +20,7 @@ partial class ProjektVerwaltung
         this.numBudget = new System.Windows.Forms.NumericUpDown();
         this.btnSave = new System.Windows.Forms.Button();
         this.btnDelete = new System.Windows.Forms.Button();
+        this.btnNew = new System.Windows.Forms.Button();
         this.label1 = new System.Windows.Forms.Label();
         this.label2 = new System.Windows.Forms.Label();
         ((System.ComponentModel.ISupportInitialize)(this.numBudget)).BeginInit();
@@ -69,6 +70,16 @@ partial class ProjektVerwaltung
         this.btnDelete.UseVisualStyleBackColor = true;
         this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
         // 
+        // btnNew
+        // 
+        this.btnNew.Location = new System.Drawing.Point(230, 150);
+        this.btnNew.Name = "btnNew";
+        this.btnNew.Size = new System.Drawing.Size(155, 23);
+        this.btnNew.TabIndex = 7;
+        this.btnNew.Text = "Neu / Auswahl aufheben";
+        this.btnNew.UseVisualStyleBackColor = true;
+        this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+        // 
         // label1
         // 
         this.label1.AutoSize = true;
@@ -92,6 +103,7 @@ partial class ProjektVerwaltung
         this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(400, 270);
+        this.Controls.Add(this.btnNew);
         this.Controls.Add(this.label2);
         this.Controls.Add(this.label1);
         this.Controls.Add(this.btnDelete);
@@ -111,6 +123,7 @@ partial class ProjektVerwaltung
     private System.Windows.Forms.NumericUpDown numBudget;
     private System.Windows.Forms.Button btnSave;
     private System.Windows.Forms.Button btnDelete;
+    private System.Windows.Forms.Button btnNew;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
 }

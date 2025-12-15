@@ -107,8 +107,8 @@ public sealed class SqLiteConnection
             {
                 EintragID = reader.GetInt32(0),
                 ProjektID = reader.GetInt32(1),
-                Startzeit = DateTime.Parse(reader.GetString(2)),
-                Endzeit = DateTime.Parse(reader.GetString(3))
+                Startzeit = DateTime.Parse(reader.GetString(2), System.Globalization.CultureInfo.InvariantCulture),
+                Endzeit = DateTime.Parse(reader.GetString(3), System.Globalization.CultureInfo.InvariantCulture)
             });
         }
         return list;
