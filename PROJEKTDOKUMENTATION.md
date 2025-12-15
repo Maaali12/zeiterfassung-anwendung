@@ -19,7 +19,7 @@
    2.3 [Ressourcenplanung](#23-ressourcenplanung)
 3. [Analyse](#3-analyse)
    3.1 [Ist-Analyse](#31-ist-analyse)
-   3.2 [Wirtschaftlichkeitsanalyse (Make-or-Buy)](#32-wirtschaftlichkeitsanalyse-make-or-buy)
+   3.2 [Wirtschaftlichkeitsanalyse](#32-wirtschaftlichkeitsanalyse-make-or-buy)
    3.3 [Soll-Konzept](#33-soll-konzept)
    3.4 [Anforderungsanalyse (Lastenheft)](#34-anforderungsanalyse)
 4. [Entwurf](#4-entwurf)
@@ -49,8 +49,7 @@
 ## 1. Einleitung
 
 ### 1.1 Projektumfeld
-Die ZIM ist ein mittelständisches Unternehmen mit Fokus auf IT-Dienstleistungen und Softwareentwicklung. Im Rahmen der täglichen Arbeit müssen technische Mitarbeiter ihre Arbeitszeiten projektbezogen erfassen, um eine präzise Abrechnung gegenüber dem Kunden sowie eine interne Budgetkontrolle zu gewährleisten.
-
+Die Heinrich-Heine-Universität Düsseldorf(HHU), welche der Ausbildungsbetrieb ist, legt ihren Fokus aufForschung und Lehre. Derzeit sind rund 30.000 Studierende an den fünf Fakultäten eingeschrieben. Zudemsind etwa 3.000 Mitarbeitende in wissenschaftlichen Bereichen sowie in Technik und Verwaltung tätig.Als zentrale Betriebseinheit unterstützt das Zentrum für Informations- und Medientechnologie (ZIM) dieUniversitätnichtnurmitderBereitstellungdesCampusnetzwerks,sondernauchmitvielendigitalenDienstleistungen, die dafür sorgen, dass der tägliche Ablauf an der Hochschule reibungslos funktioniert.Dort ist auch die Ausbildung der Fachinformatiker angesiedelt, um genauer zu sein in der AbteilungForschungsdateninfrastruktur, Webtechnologien und Anwendungsunterstützung (FWA).
 ### 1.2 Problemstellung
 Bisher erfolgte die Zeiterfassung bei der ZIM unstrukturiert. Mitarbeiter nutzten diverse Excel-Tabellen oder handschriftliche Notizen, die am Monatsende manuell in das Abrechnungssystem übertragen wurden. Dieser Prozess war fehleranfällig, zeitintensiv und bot keine Möglichkeit zur Echtzeit-Überwachung von Projektbudgets. Projektleiter erhielten Informationen über Budgetüberschreitungen oft erst Wochen nach dem Ereignis.
 
@@ -72,24 +71,24 @@ Das Projekt konzentriert sich auf die reine Erfassung und lokale Verwaltung. Ein
 Für die Durchführung wurde ein **iteratives Vorgehensmodell** gewählt. Dies ermöglichte es, frühzeitig funktionale Prototypen der GUI zu erstellen und die Datenbankschicht sukzessive zu erweitern. Besonders bei der UI-Entwicklung konnte so flexibel auf Anforderungen an die Bedienbarkeit reagiert werden.
 
 ### 2.2 Zeitplanung
-Die Gesamtdauer des Projekts wurde auf 70 Stunden kalkuliert:
+Die Gesamtdauer des Projekts wurde auf ca. 50 Stunden kalkuliert:
 
 | Phase | Tätigkeit | Geplante Zeit |
 |-------|-----------|---------------|
-| **Analyse** | Ist-Analyse & Soll-Konzept | 8h |
-| | Wirtschaftlichkeitsbetrachtung | 2h |
-| **Entwurf** | Datenbankdesign (ER-Modell) | 4h |
-| | GUI-Entwurf & Architektur | 6h |
-| **Implementierung** | Datenbank-Infrastruktur | 10h |
-| | Business Logik & Timer | 12h |
-| | GUI-Umsetzung | 10h |
-| **QS** | Testing & Fehlerbehebung | 8h |
-| **Doku** | Projektdokumentation | 10h |
-| **Gesamt** | | **70h** |
+| **Analyse** | Ist-Analyse & Soll-Konzept | 4h            |
+| | Wirtschaftlichkeitsbetrachtung | 2h            |
+| **Entwurf** | Datenbankdesign (ER-Modell) | 6h            |
+| | GUI-Entwurf & Architektur | 6h            |
+| **Implementierung** | Datenbank-Infrastruktur | 8h            |
+| | Logik & Timer | 10h           |
+| | GUI-Umsetzung | 6h            |
+| **QS** | Testing & Fehlerbehebung | 8h            |
+| **Doku** | Projektdokumentation | 6h            |
+| **Gesamt** | | **ca. 50h**   |
 
 ### 2.3 Ressourcenplanung
 - **Hardware:** Arbeitsplatzrechner (16GB RAM, Windows 11).
-- **Software:** JetBrains Rider als IDE, SQLite Browser zur DB-Visualisierung.
+- **Software:** JetBrains Rider als IDE, SQLite Browser zur DB-Visualisierung (DBBeaver).
 - **Frameworks:** .NET 10.0, Windows Forms, Microsoft.Data.Sqlite.
 
 ---
@@ -99,7 +98,7 @@ Die Gesamtdauer des Projekts wurde auf 70 Stunden kalkuliert:
 ### 3.1 Ist-Analyse
 Die manuelle Erfassung in Excel führt zu einem geschätzten Zeitverlust von ca. 15 Minuten pro Mitarbeiter und Woche allein durch Formatierungsfehler und Suchen nach der richtigen Datei. Hochgerechnet auf 20 Mitarbeiter entstehen so erhebliche unproduktive Kosten.
 
-### 3.2 Wirtschaftlichkeitsanalyse (Make-or-Buy)
+### 3.2 Wirtschaftlichkeitsanalyse
 Eine Marktrecherche ergab, dass kommerzielle Zeiterfassungstools monatliche Lizenzgebühren von ca. 5-10 € pro Nutzer verlangen. Bei 20 Nutzern entspräche dies ca. 1.200 € bis 2.400 € pro Jahr. Die internen Entwicklungskosten (einmalig ca. 70h x 60€ internem Stundensatz = 4.200 €) amortisieren sich somit nach spätestens zwei Jahren. Zudem entfallen Cloud-Abhängigkeiten und Datenschutzbedenken (DSGVO), da die Daten lokal verbleiben.
 
 ### 3.3 Soll-Konzept
